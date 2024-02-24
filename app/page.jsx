@@ -13,17 +13,16 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto grid max-w-sm items-start gap-4 text-left sm:max-w-2xl md:gap-6">
-              <p className="opacity-0 translate-y-2 animation duration-500 ease-in-out delay-500">A dev in love with Python playing with Javascript</p>
-              <p className="opacity-0 translate-y-2 animation duration-500 ease-in-out delay-1000">The incredibly developer in making</p>
+              <p className="">The maestro in making in love with Python playing with Javascript</p>
             </div>
           </div>
 
           <div className="mx-auto order-1 lg:order-2">
             <Image
               alt="me"
-              className="rounded-xl aspect-[3/2] overflow-hidden shadow-lg object-cover object-center"
+              className="rounded-xl aspect-[3/2] overflow-hidden shadow-lg object-fill object-center"
               height="400"
-              src="/placeholder.svg"
+              src="/me.jpg"
               width="600"
             />
           </div>

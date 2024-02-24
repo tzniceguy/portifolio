@@ -20,14 +20,16 @@ function NavBar() {
     ]
 
   return (
-    <nav  className="border-solid border-2 border-slate-100 rounded m-4 w-2/4 p-2">
-      <div className="flex justify-between items-center">
-      <button className="block md:hidden" onClick={toggleMenu}>
+    <nav  className="md:border-solid md:border-2 md:border-slate-100 md:rounded md:m-4 w-2/4 p-2 float-right sticky shadow-md">
+      <div className="flex justify-between float-right">
+      <button className="md:hidden hover:text-zinc-900 text-xl " onClick={toggleMenu}>
         <CiMenuFries/>
       </button>
-        <ul className="{`flex ${menuOpen ? 'flex-col' : 'hidden'} md:flex md:items-center md:space-x-6 md:flex-row`}">
+      <div className="hidden md:block">
+        <ul className="{`md:flex ${menuOpen ? 'md:flex-col' : 'hidden'} md:flex md:items-center md:space-x-6 md:flex-row`}">
             {links.map(link => <Link key={link.href}className={`${link.href === currentPath ? "text-zinc-900" :"text-zinc-500"} hover:text-zinc-800 transition-colors`} href={link.href}>{link.label}</Link>)}
         </ul>
+      </div>
       </div>
     </nav>
   ) 
