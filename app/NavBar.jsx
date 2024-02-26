@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CiMenuFries } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
+
 
 function NavBar() {
   const currentPath = usePathname()
@@ -11,8 +13,16 @@ function NavBar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
-
-    const links = [
+  const menuButton = menuOpen ? (
+    <button className="md:hidden hover:text-zinc-900 text-xl " onClick={toggleMenu}>
+      <IoMdClose />
+    </button>
+  ) : (
+    <button className="md:hidden hover:text-zinc-900 text-xl " onClick={toggleMenu}>
+      <CiMenuFries/>
+    </button>
+  );
+  const links = [
         {label: 'Home', href:'/'},
         {label: 'about', href:'/about'},
         {label: 'projects', href:'/projects'},
@@ -23,9 +33,7 @@ function NavBar() {
     <nav
     className={`md:flex md:justify-between md:items-center md:space-x-6 md:border-solid md:border-2 md:border-slate-100 md:rounded md:m-4 w-2/4 p-2 float-right sticky shadow-md`}>
       <div className="flex justify-between float-right">
-        <button className="md:hidden hover:text-zinc-900 text-xl " onClick={toggleMenu}>
-          <CiMenuFries/>
-        </button>
+        {menuButton}
         <div className={`md:flex md:items-center md:space-x-6 ${menuOpen ? "block" : "hidden"} md:block`}>
           <ul className="md:flex md:items-center md:space-x-6 md:flex-row">
             {links.map(link => (
