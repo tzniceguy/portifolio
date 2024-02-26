@@ -25,11 +25,18 @@ function NavBar() {
       <button className="md:hidden hover:text-zinc-900 text-xl " onClick={toggleMenu}>
         <CiMenuFries/>
       </button>
-      <div className="hidden md:block">
-        <ul className="{`md:flex ${menuOpen ? 'md:flex-col' : 'hidden'} md:flex md:items-center md:space-x-6 md:flex-row`}">
-            {links.map(link => <Link key={link.href}className={`${link.href === currentPath ? "text-zinc-900" :"text-zinc-500"} hover:text-zinc-800 transition-colors`} href={link.href}>{link.label}</Link>)}
-        </ul>
-      </div>
+      <div className={`md:flex md:items-center md:space-x-6 ${menuOpen ? "block" : "hidden"} md:block`}>
+  <ul>
+    {links.map(link => (
+      <li key={link.href}>
+        <Link className={`${link.href === currentPath ? "text-zinc-900" : "text-zinc-500"} hover:text-zinc-800 transition-colors`} href={link.href}>
+          {link.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
       </div>
     </nav>
   ) 
