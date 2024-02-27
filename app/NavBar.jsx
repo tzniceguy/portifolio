@@ -30,8 +30,7 @@ function NavBar() {
     ]
 
   return (
-    <header className="md:float md:justify-center">
-      <nav className={`md:flex md:justify-between md:items-center md:space-x-6 md:border-solid md:border-2 md:border-slate-100 md:rounded md:m-4 w-2/4 p-2 float-right sticky shadow-md`}>
+    <nav className={`md:flex md:justify-center md:items-center md:space-x-6 md:border-solid md:border-2 md:border-slate-100 md:rounded md:m-4 w-2/4 p-2 sticky shadow-md`}>
         <div className="flex justify-between float-right">
           {menuButton}
           <div className={`md:flex md:items-center md:space-x-6 ${menuOpen ? "block" : "hidden"} md:block`}>
@@ -47,7 +46,6 @@ function NavBar() {
           </div>  
         </div>
       </nav>
-    </header>
   ) 
 }
 

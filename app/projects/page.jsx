@@ -2,6 +2,14 @@
 import Card from "./card"
 
 export default function Page(){
+
+    const projects= [
+        {name: 'Lugumya', description:'Lugumya Expense Tracker & Budgeting Web App: A user-friendly solution for personal finance management, empowering better expense tracking, budget control, and informed financial decisions.',  href:'/',image: '/projectimage.jpg'},
+        {name: 'Shopika', description:'an ecommerce website made with Python Django framework and frontend crafted with html and tailwind css',  href:'/', image: '/projectimage.jpg'},
+        {name: 'EDITH', description:'',  href:'/',image: '/projectimage.jpg'},
+        {name: 'candSqlLite', description:'A semister project i made in Data insertion and retrieval from database using C and Sqlite Database',  href:'/',image: '/projectimage.jpg'},
+    ]
+
     return(
     <div class="flex min-h-screen flex-col">
         <main class="flex-1">
@@ -19,7 +27,8 @@ export default function Page(){
                         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My projects</h2>
                     </div>
                     <div class="grid w-full grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 xl:max-w-6xl xl:grid-cols-3 xl:gap-10">
-                        <Card/>
+                        {projects.map((project, index) => (<Card key={index} name={project.name} description={project.description} href={project.href} image={project.image}
+                         />))}
                     </div>
                 </div>
             </section>

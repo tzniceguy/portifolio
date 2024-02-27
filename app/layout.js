@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={space.className}>
+        <header className="md:float md:justify-center">
         <NavBar />
+        </header>
         <main>{children}</main>
         <Footer />
         </body>
