@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { CiCamera, CiDatabase,CiMail,CiHome} from "react-icons/ci";
 import { FaTools } from "react-icons/fa";
@@ -6,8 +5,8 @@ import { LuLayout } from "react-icons/lu";
 
 export default function Page() {
   return (
-    <div className="w-full py-12 lg:py-16">
-      <div className="container grid md:gap-6 lg:grid-cols-3 xl:gap-8">
+    <div className="w-full p-6">
+      <div className="container mx-auto px-4">
         <div className="space-y-4 lg:col-span-2 lg:space-y-6">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Tzniceguy</h1>
@@ -90,19 +89,10 @@ export default function Page() {
               </Link>
               <div className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400">
                 <CiHome  className="w-4 h-4" />
-                tzniceguy@github.io
+                tzniceguy.github.io
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex items-center justify-center space-y-4 lg:space-y-0">
-          <Image
-            alt="Profile"
-            className="rounded-full aspect-[3/4] overflow-hidden object-cover object-center border-4  border-gray-100 dark:border-gray-800 dark:filter dark:contrast-125"
-            height="400"
-            src="/placeholder.svg"
-            width="300"
-          />
         </div>
       </div>
     </div>
