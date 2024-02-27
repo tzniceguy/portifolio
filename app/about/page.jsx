@@ -4,10 +4,6 @@ import { CiCamera, CiDatabase,CiMail,CiHome} from "react-icons/ci";
 import { FaTools } from "react-icons/fa";
 import { LuLayout } from "react-icons/lu";
 
-
-
-
-
 export default function Page() {
   return (
     <div className="w-full py-12 lg:py-16">
